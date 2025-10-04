@@ -4,11 +4,10 @@ import path from "path";
 import { viteSourceLocator } from "@metagptx/vite-plugin-source-locator";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
+  base: "/Blog-Statistic/",
   plugins: [
-    viteSourceLocator({
-      prefix: "mgx",
-    }),
+    viteSourceLocator({ prefix: "mgx" }),
     react(),
   ],
   resolve: {
@@ -16,4 +15,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
