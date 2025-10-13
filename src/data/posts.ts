@@ -127,5 +127,171 @@ As cyber threats continue to evolve in complexity and scale, the role of statist
 
 The intersection of statistics and cybersecurity represents a powerful combination that transforms raw security data into actionable intelligence, enabling more effective protection of digital assets and infrastructure.
     `
-  }
+  },
+    {
+    id: '2',
+    title: "Homework 2 - Dataset, Distribution and Caesar Cipher",
+    excerpt: 'Understanding datasets and distributions with LibreOffice Base, and exploring text encryption and decryption with JavaScript.',
+    date: '2025-10-13',
+    slug: 'dataset-distribution-caesar-cipher',
+    content: `
+# Homework 2 – Dataset, Distribution and Caesar Cipher
+
+## 1️⃣ Dataset and Distribution
+
+### Concept
+A **dataset** is a structured collection of related data, typically organized in tables with rows (records) and columns (attributes).  
+A **distribution** represents how values are spread across categories or numerical ranges — for example, how many students belong to each age group.
+
+### Implementation
+Using **LibreOffice Base 25.8** (a DBMS similar to Microsoft Access), I created a simple dataset with the following table:
+
+#### Table: Studenti
+| ID | Età | Sesso | OreStudio |
+|----|-----|--------|-----------|
+| 1  | 20  | M      | 5         |
+| 2  | 22  | F      | 7         |
+| 3  | 21  | M      | 8         |
+| 4  | 20  | F      | 6         |
+| 5  | 21  | M      | 7         |
+
+From this dataset, I computed **k-invariate distributions** (with k ≤ 3).
+
+---
+
+### Query 1 – Distribution by Age
+\`\`\`sql
+SELECT Età, COUNT(*) AS Frequenza
+FROM Studenti
+GROUP BY Età;
+\`\`\`
+
+**Result:**
+| Età | Frequenza |
+|-----|------------|
+| 20  | 2 |
+| 21  | 2 |
+| 22  | 1 |
+
+---
+
+### Query 2 – Distribution by Age and Gender
+\`\`\`sql
+SELECT Età, Sesso, COUNT(*) AS Frequenza
+FROM Studenti
+GROUP BY Età, Sesso;
+\`\`\`
+
+**Result:**
+| Età | Sesso | Frequenza |
+|-----|--------|------------|
+| 20  | F | 1 |
+| 20  | M | 1 |
+| 21  | M | 2 |
+| 22  | F | 1 |
+
+---
+
+These queries show how to compute **univariate** (Età), **bivariate** (Età + Sesso), or **trivariate** distributions using SQL.
+
+---
+
+## 2️⃣ Text Analysis with JavaScript
+
+In the second part, I worked with **JavaScript** in **Visual Studio Code** to analyze text, apply encryption (Caesar Cipher), and perform automated decryption.
+
+The chosen texts were:
+- **Short text:** “HELLO WORLD”
+- **Long text:**  
+  “LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.”
+
+---
+
+### (a) Letter Distribution
+The first script calculates how often each letter appears and the percentage of each letter, ordered from most to least frequent.
+
+**Example Output:**
+\`\`\`
+PS C:\\Users\\alela\\Desktop\\CesarCipher> node distribution.js
+Testo: LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+Distribuzione delle lettere (ord. per frequenza):
+{
+  I: '11.65',
+  E: '10.68',
+  O: '9.71',
+  T: '8.74',
+  D: '7.77',
+  A: '6.80',
+  L: '5.83',
+  R: '5.83',
+  M: '5.83',
+  S: '5.83',
+  U: '5.83',
+  N: '4.85',
+  C: '3.88',
+  P: '2.91',
+  G: '1.94',
+  B: '0.97',
+  Q: '0.97'
+}
+\`\`\`
+
+This shows the distribution of letters — a fundamental step in text analysis and cryptography.
+
+---
+
+### (b) Caesar Cipher
+A **Caesar Cipher** is a substitution cipher that shifts every letter by a fixed number in the alphabet.  
+For example, a shift of **3** transforms “HELLO WORLD” into “KHOOR ZRUOG”.
+
+---
+
+### (c) Brute Force Decode
+If the shift is unknown, the program can try all 26 possible shifts and display all the results.
+
+**Example Output:**
+\`\`\`
+PS C:\\Users\\alela\\Desktop\\CesarCipher> node brute_decode.js
+🔍 Possibili decodifiche:
+
+Shift 0: KHOOR ZRUOG
+Shift 1: JGNNQ YQTNF
+Shift 2: IFMMP XPSME
+Shift 3: HELLO WORLD
+Shift 4: GDKKN VNQKC
+...
+Shift 25: LIPPS ASVPH
+\`\`\`
+
+Here, the correct message (“HELLO WORLD”) appears at **shift 3**, revealing the original text.
+
+---
+
+### (d) Language Distribution Decode
+A smarter decoding method uses **language frequency analysis**.  
+The script compares the letter frequencies of the encrypted text with the typical frequencies of English to estimate the most probable shift automatically.
+
+**Example Output:**
+\`\`\`
+PS C:\\Users\\alela\\Desktop\\CesarCipher> node distribution_decode.js
+ Testo cifrato: ADGTB XEHJB SDADG HXI PBTI, RDCHTRITIJG PSXEXHXRXCV TAXI. HTS SD TXJHBDS ITBEDG XCRXSXSJCI JI APQDGT TI SDADGT BPVCP PAXFJP.
+
+ Decodifica automatica:
+Shift stimato: 15
+Testo decifrato: LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+\`\`\`
+
+This approach successfully recovered the original long text by analyzing letter frequencies.
+
+---
+
+## 🧠 Conclusion
+This homework combined **data analysis** and **cryptography**.  
+- Using LibreOffice Base, I explored **data distributions** through SQL queries.  
+- Using JavaScript, I implemented **text distribution analysis**, **Caesar Cipher encryption**, and **automated decryption** with both **brute force** and **language-based analysis**.
+
+Both parts demonstrate the importance of understanding **patterns and distributions** — whether in structured data or encrypted text.
+`
+  },
+
 ];
