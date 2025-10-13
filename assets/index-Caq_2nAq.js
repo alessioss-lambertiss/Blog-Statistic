@@ -191,9 +191,34 @@ The intersection of statistics and cybersecurity represents a powerful combinati
 
 ## 1️⃣ Dataset and Distribution
 
-### Concept
-A **dataset** is a structured collection of related data, typically organized in tables with rows (records) and columns (attributes).  
-A **distribution** represents how values are spread across categories or numerical ranges — for example, how many students belong to each age group.
+### Dataset
+
+A **dataset** is a systematically organized collection of data, structured in a way that allows for efficient storage, retrieval, and analysis. Typically, a dataset is represented as a **table**, composed of **rows** (also called records or observations) and **columns** (also called attributes, fields, or variables).
+
+- **Rows / Records:** Each row represents a single unit of observation. For example, in a dataset about students, each row might represent an individual student and contain all the information associated with that student.  
+- **Columns / Attributes:** Each column represents a specific feature, property, or variable of the observation. In the students dataset, columns might include age, gender, number of study hours, major, or enrollment year.
+
+Datasets can contain **numerical data**, **categorical data**, or a **mixture of both**, depending on the type of information being recorded. They serve as the foundation for statistical analysis, data science, machine learning, and many other fields, because they allow analysts and researchers to **collect, organize, and examine data in a systematic and meaningful way**.
+
+A well-structured dataset enables various types of data manipulation and analysis, such as filtering, sorting, grouping, and summarizing. It also allows for **visualization of patterns, identification of trends, detection of anomalies**, and building predictive or descriptive models. Without a clear structure, extracting meaningful insights from raw data becomes very difficult or even impossible.
+
+In practical terms, datasets are the starting point for almost any quantitative study: they are the “raw material” from which we derive conclusions, test hypotheses, and make informed decisions. The quality, accuracy, and organization of a dataset directly affect the reliability of the analyses performed on it.
+
+---
+
+### Distribution
+
+A **distribution** describes how the values of a variable are **spread out or concentrated** within a dataset. In other words, it shows **the frequency or proportion of each value or category** of a variable. Understanding distributions is fundamental in statistics, because it helps reveal the structure, patterns, and characteristics of the data.
+
+Distributions can be classified into several types:
+
+- **Univariate distribution:** Focuses on a single variable at a time, showing how its values are distributed. For example, in a students dataset, a univariate distribution of age would show how many students are 20 years old, 21 years old, 22 years old, and so on.  
+- **Bivariate distribution:** Examines two variables simultaneously, showing the combined frequency of value pairs. For instance, it can show how many students are 20 years old **and** male or female.  
+- **Multivariate distribution:** Involves three or more variables at the same time, which is useful for analyzing complex relationships among multiple attributes.
+
+Distributions can involve **categorical variables** (like gender or major) or **numerical variables** (like test scores or study hours). They provide essential information for **identifying trends, spotting outliers, and understanding patterns** in the dataset.
+
+Studying distributions also forms the foundation for more advanced analysis, including probability modeling, hypothesis testing, and machine learning. By observing how data is distributed, analysts can make informed decisions about which statistical methods or algorithms are most appropriate, and can better interpret the results of their analyses.
 
 ### Implementation
 Using **LibreOffice Base 25.8** (a DBMS similar to Microsoft Access), I created a simple dataset with the following table:
