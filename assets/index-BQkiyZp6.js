@@ -189,7 +189,7 @@ The intersection of statistics and cybersecurity represents a powerful combinati
     `},{id:"2",title:"Homework 2 - Dataset, Distribution and Caesar Cipher",excerpt:"Understanding datasets and distributions with LibreOffice Base, and exploring text encryption and decryption with JavaScript.",date:"2025-10-13",slug:"dataset-distribution-caesar-cipher",content:`
 # Homework 2 – Dataset, Distribution and Caesar Cipher
 
-## 1️⃣ Dataset and Distribution
+## 1️) Dataset and Distribution
 
 ### Dataset
 
@@ -224,7 +224,7 @@ Studying distributions also forms the foundation for more advanced analysis, inc
 Using **LibreOffice Base 25.8** (a DBMS similar to Microsoft Access), I created a simple dataset with the following table:
 
 #### Table: Studenti
-| ID | Età | Sesso | OreStudio |
+| ID | Età | Genere | OreStudio |
 |----|-----|--------|-----------|
 | 1  | 20  | M      | 5         |
 | 2  | 22  | F      | 7         |
@@ -254,13 +254,13 @@ GROUP BY Età;
 
 ### Query 2 – Distribution by Age and Gender
 \`\`\`sql
-SELECT Età, Sesso, COUNT(*) AS Frequenza
+SELECT Età, Genere, COUNT(*) AS Frequenza
 FROM Studenti
-GROUP BY Età, Sesso;
+GROUP BY Età, Genere;
 \`\`\`
 
 **Result:**
-| Età | Sesso | Frequenza |
+| Età | Genere | Frequenza |
 |-----|--------|------------|
 | 20  | F | 1 |
 | 20  | M | 1 |
@@ -269,11 +269,11 @@ GROUP BY Età, Sesso;
 
 ---
 
-These queries show how to compute **univariate** (Età), **bivariate** (Età + Sesso), or **trivariate** distributions using SQL.
+These queries show how to compute **univariate** (Età), **bivariate** (Età + Genere), or **trivariate** distributions using SQL.
 
 ---
 
-## 2️⃣ Text Analysis with JavaScript
+## 2) Text Analysis with JavaScript
 
 In the second part, I worked with **JavaScript** in **Visual Studio Code** to analyze text, apply encryption (Caesar Cipher), and perform automated decryption.
 
@@ -329,7 +329,7 @@ If the shift is unknown, the program can try all 26 possible shifts and display 
 **Example Output:**
 \`\`\`
 PS C:\\Users\\alela\\Desktop\\CesarCipher> node brute_decode.js
-🔍 Possibili decodifiche:
+Possibili decodifiche:
 
 Shift 0: KHOOR ZRUOG
 Shift 1: JGNNQ YQTNF
@@ -362,7 +362,7 @@ This approach successfully recovered the original long text by analyzing letter 
 
 ---
 
-## 🧠 Conclusion
+## Conclusion
 This homework combined **data analysis** and **cryptography**.  
 - Using LibreOffice Base, I explored **data distributions** through SQL queries.  
 - Using JavaScript, I implemented **text distribution analysis**, **Caesar Cipher encryption**, and **automated decryption** with both **brute force** and **language-based analysis**.
