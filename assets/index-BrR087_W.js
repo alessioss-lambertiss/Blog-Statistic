@@ -393,7 +393,7 @@ RSA relies on the mathematical properties of prime numbers and modular arithmeti
 5. **Compute private exponent**:
    - d = e⁻¹ mod φ(n) = 1783
 
-#### Character Transformation Process
+## Character Transformation Process
 
 Each character undergoes a precise transformation:
 
@@ -412,12 +412,12 @@ Each character undergoes a precise transformation:
    - Continue to 110⁷ = 194,871,710,000,000
    - Apply modulus: 194,871,710,000,000 mod 3233 = 1544
 
-#### Practical Example
-\`\`\`
+## Practical Example
+
 Original:  "n e l   m e z z o"
 Unicode:   [110, 101, 108, 32, 109, 101, 122, 122, 111]
 Encrypted: [1544, 3071, 1877, 2774, 597, 3071, 1586, 1586, 3183]
-\`\`\`
+
 
 ## Understanding Entropy in Cryptography
 
@@ -425,59 +425,57 @@ Encrypted: [1544, 3071, 1877, 2774, 597, 3071, 1586, 1586, 3183]
 
 Entropy measures the unpredictability or randomness in a system. In cryptographic terms, it quantifies how difficult it is to guess encrypted data.
 
-#### Entropy Scale Examples
+## Entropy Scale Examples
 - **Low Entropy (Predictable)**: "AAAAA" → Easily guessable pattern
 - **High Entropy (Random)**: "F9T@1P#M5K" → Unpredictable sequence
 
 ### Entropy Calculation
 
-#### RSA Implementation Analysis
+## RSA Implementation Analysis
 - **Maximum Possible Entropy**: 8.0 bits (for 256 possible values)
 - **Actual Encrypted Entropy**: 3.9 bits
 - **Entropy Ratio**: 48.82%
 
-#### What These Numbers Mean
+## What These Numbers Mean
 - **3.9 bits entropy** ≈ 15 equally probable values out of 256
 - **Attack Success Probability**: 6.7% vs ideal 0.4%
 - **Pattern Recognition**: Repeated characters produce identical encrypted values
 
 ### Security Implications
 
-#### Identified Vulnerabilities
+## Identified Vulnerabilities
 1. **Character-level Encryption**: Same input always produces same output
 2. **Low Entropy**: Reduced search space for brute-force attacks
 3. **Frequency Analysis**: Common characters maintain recognizable patterns
 
 ## Real-world Example
-\`\`\`
+
 ### Vulnerable Pattern:
 'e' → always encrypts to 3071
 'z' → always encrypts to 1586
 
 An attacker observing: 3071 1877 2774 3071
 Can deduce: "e l e" pattern exists
-\`\`\`
+
 
 ## Improving RSA Security
 
 ### Enhanced Implementation Techniques
 
 # 1. Cryptographic Padding
-\`\`\`
-## Instead of raw character encryption:
+
+### Instead of raw character encryption:
 ' e ' → "x7g!9e" → RSA encryption → unique output each time
-\`\`\`
 
 # 2. Block Cipher Mode
-\`\`\`
-## Encrypt text blocks instead of individual characters
+
+### Encrypt text blocks instead of individual characters
 "nel " → encrypted as single block → 893472
 "mezz" → encrypted as separate block → 1284765
-\`\`\`
 
 # 3. Larger Prime Numbers
-\`\`\`
-## Production-grade vs educational example
+
+### Production-grade vs educational example
 n = 3233  # Educational (vulnerable)
 n = 251959084756578934940271832400483985714292821262040320277771378360436620207075955562640185258807
 8440691829064124951508218929855914917618450280848912007284499268739280728777673597141834727026189637
@@ -486,7 +484,7 @@ n = 2519590847565789349402718324004839857142928212620403202777713783604366202070
 1067481045166037730605620161967625613384414360383390441495263443219011465754445417842402092461651572
 3350778707749817125772467962926386356373289912154831438167899885040445364023527381951378636564391212
 010397122822120720357  # Production (secure)
-\`\`\`
+
 
 ## Practical Applications and Limitations
 
