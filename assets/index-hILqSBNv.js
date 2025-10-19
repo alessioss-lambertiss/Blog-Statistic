@@ -381,7 +381,7 @@ RSA (Rivest-Shamir-Adleman) is one of the first practical public-key cryptosyste
 
 RSA relies on the mathematical properties of prime numbers and modular arithmetic. The algorithm involves three main steps:
 
-#### Key Generation
+## Key Generation
 1. **Select two distinct prime numbers**: 
    - p = 61, q = 53
 2. **Compute the modulus**:
