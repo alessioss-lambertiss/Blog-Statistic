@@ -710,7 +710,7 @@ The **dashed line** marks the true probability ( p = 0.5 ).
 A **vertical histogram** on the right shows the distribution of the final relative frequencies ( f(n) ) across all trajectories.  
 As ( n ) grows large, the histogram becomes sharply centered around ( p ), confirming the convergence predicted by the LLN.
 
-![LLN Simulation](/images/lln_simulation.png)
+![LLN Simulation](images/lln_simulation.png)
 
 *Figure 1 – Convergence of empirical frequencies ( f(n) ) toward the true probability ( p = 0.5 ).*
 
