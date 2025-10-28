@@ -651,18 +651,15 @@ Let:
 
 We define the **sample average** (or **relative frequency**) after ( n ) trials as:
 
--[
--\bar{X}_n = \frac{1}{n} sum_{i=1}^{n} X_i
--]
+Let X₁, X₂, X₃, …, Xₙ be independent and identically distributed random variables (e.g., 1 for heads, 0 for tails).
 
-In the simulation, this corresponds to **f(n)** — the average number of successes up to the n-th trial.  
+Each variable has an expected value E[Xᵢ] = p.
 
-The **Law of Large Numbers** states that:
+The sample average after n trials is:
 
--[
-- bar{X}_n 	 rightarrow[n 	o infty]{} E[X_i] = p
--]
+f(n) = (1/n) * Σ Xᵢ
 
+The Law of Large Numbers states that as n → ∞, f(n) approaches p — the true probability of success.
 That is, the sample average converges to the true probability **p** as the number of trials becomes very large.
 
 ---
