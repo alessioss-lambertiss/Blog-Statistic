@@ -1240,7 +1240,7 @@ By constructing disjoint sets from any sequence A1, A2, ..., An we obtain the ge
 
 For two events A and B:
 P(A union B) = P(A) + P(B) - P(A intersection B)
-`},{id:"10",title:"Homework 10 - From Bernoulli Trials to a Poisson Counting Process",excerpt:"Simulating a Poisson process using Bernoulli trials and studying the resulting distribution.",date:"2025-11-20",slug:"Bernoulli-to-Poisson-Process",content:`
+`},{id:"10",title:"Homework 10 - From Bernoulli Trials to a Poisson Counting Process",excerpt:"Simulating a Poisson process using Bernoulli trials and studying the resulting distribution.",date:"2025-11-19",slug:"Bernoulli-to-Poisson-Process",content:`
 # From Bernoulli Trials to a Poisson Counting Process
 
 ## Discrete Approximation
